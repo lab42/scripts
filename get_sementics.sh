@@ -4,7 +4,7 @@ PROJECT=semantics
 
 TMP=$(mktemp -d)
 VERSION=$(curl -s https://api.github.com/repos/lab42/${PROJECT}/releases/latest | grep "tag_name" | sed -E 's/.*"v([^"]+)".*/\1/')
-OS=$(uname | tr '[:lower:]' '[:upper:]' ${OS:1})
+OS=$(uname | tr '[:lower:]' '[:upper:]')
 ARCH=$(uname -m)
 
 case $ARCH in
