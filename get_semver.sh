@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-PROJECT=semantics
+PROJECT=semver
 
 TMP=$(mktemp -d)
 VERSION=$(curl -s https://api.github.com/repos/lab42/${PROJECT}/releases/latest | grep "tag_name" | sed -E 's/.*"v([^"]+)".*/\1/')
